@@ -66,22 +66,14 @@ public class Ex03_Operator {
 		
 		a = 10;
 		b=12;
-		boolean result2=++a>=b||2+7<=b&&13-b>=0&&(a+=b)-(a%b)>10;//F||T&&T&&T
+		boolean result2=++a>=b||2+7<=b&&13-b>=0&&(a+=b)-(a%b)>10;//T||T&&T&&T
 		System.out.println(result2);
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("국어: ");
-		String hangle = sc.nextInt();
-		System.out.print("수학: ");
-		String math = sc.nextInt();
-		System.out.print("영어: ");
-		String eng = sc.nextInt();
+		System.out.println("=================");
 		
-		int all_add = hangle+math+eng;
-		int avg = (all_add)/3;
 		
-		System.out.println("합계: "+ all_add );
-		System.out.println("평균 : "+avg);
+		
+		
 		
 	}
 
