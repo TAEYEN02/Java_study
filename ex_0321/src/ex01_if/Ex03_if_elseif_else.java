@@ -18,6 +18,22 @@ public class Ex03_if_elseif_else {
 		//	위의 조건이 모두 거짓일때 실행할 문장
 		//}
 		
+		//else-if 문의 개수에는 제한이 없다
+		//하지만 너무 많은 else-if문을 사용한다면
+		//프로그램의 실행 속도가 현저히 느려질 수 있기 때문에
+		//다른 방법을 함께 고려해야 한다.
+		//else문은 필요 없다면 생략이 가능하다
+		
+		int favorite = 7;
+		if(favorite > 5) {
+			System.out.println("좋아하는 숫자가 5보다 큽니다");
+		}else if(favorite ==7) {
+			System.out.println("좋아하는 숫자는 7입니다");
+		}
+		//효율적인 흐름으로 제어하기 위해 if문과 else if문의 조건문의
+		//위치를 잘 고려해야한다.
+		
+		
 		
 		
 		
