@@ -33,41 +33,55 @@ public class Ex02_do_while {
 		//사용자로부터 비밀번호를 입력받아 올바른 비밀번호가 입력될 때 까지 
 		//계속 바말번호를 요구하는 프로그램
 		//비밀번호는 9486
-
+		int pw = 9486;
 		Scanner sc = new Scanner(System.in);
-		System.out.print("비밀번호를 입력하세요 : ");
-		int pass = sc.nextInt();
+		int pass = 0;
+		boolean IsAnswer = false;
 		do {
-			System.out.println("틀렸습니다, 다시 입력하세요.");
+			
 			System.out.print("비밀번호를 입력하세요 : ");
 			pass = sc.nextInt();
-		}while(pass!=9486);
-		System.out.println("접속 성공!");
+			if(pw==pass) {
+				System.out.println("접속 성공!");
+				IsAnswer = true;
+			}else {
+				System.out.println("틀렸습니다, 다시 입력하세요.");
+			}
+		}while(!IsAnswer);//비밀번호가 맞지 않으면 반복
+		
 		
 		
 		//학생의 국어, 영어, 수학 점수를 입력받는다
 		//단, 각 과목은 40점 이상이어야 하며,
 		//40점 미만이면 해당 과목 점수를 다시 입력받아야한다.
-		System.out.print("국어 : ");
-		int hangle = sc.nextInt();
-		System.out.print("영어 : ");
-		int eng = sc.nextInt();
-		System.out.print("수학 : ");
-		int math = sc.nextInt();
+//		System.out.print("국어 : ");
+//		int hangle = sc.nextInt();
+//		System.out.print("영어 : ");
+//		int eng = sc.nextInt();
+//		System.out.print("수학 : ");
+//		int math = sc.nextInt();
+//		
+//		do {
+//			System.out.println("다시입력하세요");
+//			System.out.print("국어 : ");
+//			hangle = sc.nextInt();
+//			System.out.print("영어 : ");
+//			eng = sc.nextInt();
+//			System.out.print("수학 : ");
+//			math = sc.nextInt();
+//		}while(hangle<40||eng<40||math<40);
+//		System.out.println("모든 과목이 40점이 넘네요!!");
 		
+		int kor,eng,math =0;
 		do {
-			System.out.println("다시입력하세요");
 			System.out.print("국어 : ");
-			hangle = sc.nextInt();
+			kor = sc.nextInt();
 			System.out.print("영어 : ");
 			eng = sc.nextInt();
 			System.out.print("수학 : ");
 			math = sc.nextInt();
-		}while(hangle<40||eng<40||math<40);
+		}while(kor<40||eng<40||math<40);
 		System.out.println("모든 과목이 40점이 넘네요!!");
-		
-		
-		
 		
 		
 		
