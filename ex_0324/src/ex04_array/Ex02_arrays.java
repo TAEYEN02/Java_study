@@ -50,6 +50,7 @@ public class Ex02_arrays {
 		
 		//얕은 복사(Shallow Copy) : 복사된 배열이나 원번 배열이
 		//서로간의 값이 함께 변경된다
+		//주소값을 공유
 		
 		int[] arr01 = {1,2,3};
 		//arr01은 배열 {1,2,3}의 주소값을 가지고 있다.
@@ -121,6 +122,7 @@ public class Ex02_arrays {
 		iArr1[1][2]=6;
 
 		System.out.println(iArr1[1][0]);
+
 		
 		
 		
