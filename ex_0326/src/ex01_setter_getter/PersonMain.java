@@ -9,5 +9,6 @@ public class PersonMain {
 		//setter메서드를 통해서 필드에 값을 세팅
 		p.setAge(30);
 		
+		System.out.println(p.getAge());
 	}
 }

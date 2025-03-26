@@ -15,9 +15,12 @@ public class Person {
 		}
 		age = num; //num을 age 필드에 저장
 	}
-	
+	//메서드가 getter임을 알 수 있는 방법은 
+	//메서드 앞에 get접두사를 붙힌다.
 	public int getAge() {
 		return age;
 	}
+	
+	
 	
 }
