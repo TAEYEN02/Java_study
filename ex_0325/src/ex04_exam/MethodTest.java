@@ -79,12 +79,9 @@ public class MethodTest {
 
 	}
 
-	
-	
-	
 //  Graph라는 이름의 메인 클래스를 만들어 
-  //0 ~ 9사이의 난수를 100개 저장하는 배열을 만들고, 
-  //해당 배열이 가지고 있는 각 방의 난수를 판별하여 그래프화 해 보자.
+	// 0 ~ 9사이의 난수를 100개 저장하는 배열을 만들고,
+	// 해당 배열이 가지고 있는 각 방의 난수를 판별하여 그래프화 해 보자.
 //
 //  단, 발생한 난수의 그래프화 작업은 PrintGraph클래스가 하도록 한다.
 //
@@ -100,7 +97,15 @@ public class MethodTest {
 //  7의 갯수 : ############# 13
 //  8의 갯수 : ####### 7
 //  9의 갯수 : ########## 10
-	
-	
+
+	public static String print(char ch, int num) {
+		char[] val = new char[num];
+		String str = "";
+		for (int i = 0; i < val.length; i++) {
+
+			str += val[i] = ch;
+		}
+		return str;
+	}
 
 }
