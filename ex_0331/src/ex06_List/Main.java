@@ -19,6 +19,8 @@ public class Main {
 
 			arr.add(user);
 			
+			//중복체크 부분 추가
+			
 			for(int i =0 ; i<arr.size();i++) {
 				System.out.println(arr.get(i).getId());
 				System.out.println(arr.get(i).getPass());
