@@ -2,7 +2,7 @@ package ex06_List;
 
 public class UserInfo {
 	private String id;
-	private String pwd;
+	private int pwd;
 	//1.getter/setter
 	public String getId() {
 		return id;
@@ -12,11 +12,11 @@ public class UserInfo {
 		this.id = id;
 	}
 
-	public String getPass() {
+	public int getPass() {
 		return pwd;
 	}
 
-	public void setPass(String pwd) {
+	public void setPass(int pwd) {
 		this.pwd = pwd;
 	}
 	

@@ -6,18 +6,24 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		ArrayList<UserInfo> arr = new ArrayList<>();
-
-		while(true) {
-			Scanner sc = new Scanner(System.in);
-			System.out.print("아이디 : ");
-			UserInfo user = new UserInfo();
-			user.setId(sc.nextLine());
+		Scanner sc = new Scanner(System.in);
+		out:while(true) {
 			
-		
+			System.out.print("아이디 : ");
+			UserInfo ui = new UserInfo();
+			ui.setId(sc.next());
+			
+			for(UserInfo user : arr) {
+				  if (user.getId().equals(ui.getId())) {
+					  System.out.println("이미 있는 아이디 입니다");
+	                   continue out;
+				
+				  }
+			}
+			
 			System.out.print("비밀번호 : ");
-			user.setPass(sc.nextLine());
-
-			arr.add(user);
+			ui.setPass(sc.nextInt());
+			arr.add(ui);
 			
 			//중복체크 부분 추가
 			
