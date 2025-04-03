@@ -1,5 +1,6 @@
 package ex01_Set;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class Word {
 		//중복 단어 있음
 		
 		HashSet<String> str = new HashSet<>();
-		HashSet<String> equals = new HashSet<>();
+		ArrayList<String> equals = new ArrayList<>();
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -25,15 +26,19 @@ public class Word {
 		for(String word : words) {
 			if(!str.add(word)) {
 				equals.add(word);
-				System.out.println(equals+ ", ");
 				trueFalse = true;
 			}
-			
 		}
-		if(!trueFalse){
+		if(trueFalse){
 			System.out.println("중복되는 단어 있음");
+		}else {
+			System.out.println("중복되는 단어 없음");
+
 		}
-		System.out.println("중복되는 단어 없음");
+		
+		for(int i =0 ; i<equals.size();i++) {
+			System.out.print(equals.get(i)+ " ");
+		}
 
 	}
 }

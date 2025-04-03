@@ -1,6 +1,10 @@
 package ex03_Map;
 
+import java.security.DrbgParameters.NextBytes;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Ex01_HashMap {
 	public static void main(String[] args) {
@@ -38,6 +42,35 @@ public class Ex01_HashMap {
 		map2.put("k1", 100.0);
 		map2.put("k2", 3.14);
 		map2.put("k3", 4.15);
+		
+		for(String key : map2.keySet()) {
+			System.out.print("key : "+key+", value : "+map2.get(key)+"\n");
+		}
+		
+		System.out.println("------------------");
+		
+		Iterator<String> iter = map2.keySet().iterator();
+		while(iter.hasNext()) {
+			String val = iter.next();
+			System.out.println("key : " + val +", value : "+map2.get(val));
+		}
+		
+		Iterator<Double> iter2 = map2.values().iterator();
+		while(iter2.hasNext()) {
+			double val = iter2.next();
+			System.out.println("value : " + val);
+		}
+		
+		//Set<Map,Entry<K,V>>
+		Iterator<Map.Entry<String, Double>> iter3 = map2.entrySet().iterator();
+		
+		//Entry
+		//HashMap 내부에서 key-value쌍 하나를 표현할 수 있는 객체
+		while(iter3.hasNext()) {
+			Entry<String, Double> entry = iter3.next();
+			System.out.println("key : "+entry.getKey()+", value : "+entry.getValue());
+		}
+	
 		
 		double result = map2.get("k2");
 		System.out.println(result);

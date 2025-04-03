@@ -66,6 +66,10 @@ public class Ex01_Set {
 		//왜 Integer[0]을 쓸까.
 		//적절한 크기의 새 배열을 만들어서 반환을 해준다.
 		
+		//향상된 for문
+		//리스트의 처음부터 끝까지 하나씩 뽑아 x에 대입
+		//중간에 멈추지 않는다.
+		//내부에서는 iterator를 통해 동작되고 있음
 		for(Integer x : arr) {
 			System.out.print(x+" ");
 		}
