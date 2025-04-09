@@ -22,7 +22,7 @@ public class Exam1 {
 				String res = new String(b_read).trim();
 				
 				String[] lines = res.split("\r\n|\r|\n");
-				ArrayList<String> arr_res = new ArrayList<>();
+				ArrayList<String> arr_res =new ArrayList<>();
 				
 				for (String line : lines) {
 					arr_res.add(line);
