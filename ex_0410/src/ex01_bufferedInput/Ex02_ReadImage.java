@@ -27,7 +27,7 @@ public class Ex02_ReadImage {
 			while(bis.read()  != -1) {
 				
 			}
-			//종료시간 측정
+			//종료시간 측정 
 			long end = System.currentTimeMillis();
 			
 			double result = (end-start) /1000;
