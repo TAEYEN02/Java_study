@@ -1,46 +1,30 @@
 package test;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class School {
 	public static void main(String[] args) {
-		Map<String, Integer> student = new HashMap<String, Integer>();
-		Scanner sc = new Scanner(System.in);
-			
-		StudentTest st = new StudentTest();
+		Map<String, List<Integer>> student = new HashMap<>();
 		
-		System.out.print("등록할 학생 수 : ");
-		int num = sc.nextInt();
-
-		for(int i =0; i<num;i++) {
-			System.out.println("학생의 이름과 성적 입력");
-			System.out.print("이름 : ");
-			String name = sc.next();
-			st.setStdname(name);
-			System.out.print("국어 : ");
-			int kor = sc.nextInt();
-			st.setKor(kor);
-			System.out.print("영어 : ");
-			int eng = sc.nextInt();
-			st.setEng(eng);
-			System.out.print("수학 : ");
-			int math = sc.nextInt();
-			st.setMath(math);
-			
-			st.avg();
-		}
+		student.put("홍길동",Arrays.asList(67,34,87));
+		student.put("이길동",Arrays.asList(90,84,87));
+		student.put("김길동",Arrays.asList(57,74,87));
 		
-		if(st.getAvg()>=80) {
-			student.put(st.getStdname(), (int) st.getAvg());
-			System.out.println("80점 이상인 학생 : "+student);
-		}else {
-			System.out.println("80점 이상인 학생이 없습니다.");
-		}
+		Map<String,Float> score = new HashMap<>();
 		
+		student.forEach((name,scores)->{
+			double avg = scores.stream()
+					.mapToInt(Integer::intValue)
+					.average()
+					.orElse(0.0);
+			score.put(name, (float)avg);
+		});
 		
-		
-		
+		score.entrySet().stream()
+			.filter(t->t.getValue()>=80)
+			.forEach(s->System.out.println(s.getKey()+" : "+s.getValue()));
 	}
 }

@@ -10,8 +10,8 @@ public class StudentMap {
 		scores.put("Bob", 72);
 		scores.put("Charlie", 90);
 		
-		scores.entrySet().removeIf(entry -> entry.getValue() < 80);
-
-		System.out.println(scores);
+		scores.entrySet().stream()
+			.filter(s->s.getValue() >= 80)
+			.forEach(System.out::println);
 	}
 }
