@@ -35,8 +35,7 @@ public class Ex01_Stream {
 		Stream<String> emptyStream = Stream.empty();
 		System.out.println(emptyStream.count());
 		
-		//5. 기본형스트림
-		//
+		
 		
 	}
 }
